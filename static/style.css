@@ -1,0 +1,173 @@
+/*общие настройки*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', 'Geneva', sans-serif;
+    color: #1D1D1D
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+/*home страничка*/
+.title_content .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title_content .title_btn {
+    position: absolute;
+    padding: 50px 50px 50px 50px;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.72);
+}
+
+
+/*шапка сайта*/
+.header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    /*background: rgba(255, 255, 255, 0.63);*/
+}
+
+
+.container {
+    height: 100%;
+    margin: 0 10vw 0 10vw;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu {
+    margin-top: 35px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .home .respawn {
+    width: 100%;
+}
+
+.menu .counter {
+    width: 10%;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px
+}
+
+.home .btn {
+    padding: 10px 33px 10px 32px;
+}
+
+
+.btn-info {
+    color:#fff;
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc
+}
+
+.home .btn-info {
+    color:#fff;
+    background-color: #f18c2c;
+    border-color: #ea6527
+}
+
+.home .btn-info:hover {
+    color: #fff;
+    background-color: #e5801e;
+    border-color: #f36b36
+}
+
+
+.counter {
+    margin: 0 5px 0 5px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #ffffff;
+    background: #1D1D1D;
+    border-radius: 5px
+}
+
+
+/*основное поле*/
+.content {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/planeta.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.world {
+    margin: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+
+td {
+    border: 1px solid black;
+}
+
+.cell {
+    padding: 0.1vh 0.1vw 0.1vh 0.1vw;
+    /*background: whitesmoke;*/
+    background: rgba(255, 255, 255, 0.96);
+    width: 1vw;
+    height: 1vh;
+}
+
+.living-cell {
+    background: lightgreen;
+}
+
+.dead-cell {
+    background: darkred;
+}
+
+
+table {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
