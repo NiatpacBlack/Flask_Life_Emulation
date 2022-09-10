@@ -1,13 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from game_of_life import GameOfLife
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def index(width=35, height=35):
+@app.route('/', methods=['GET', 'POST'])
+def index(width=50, height=50, error_text=''):
+    if request.method == 'POST':
+        if request.form['input_width'].isdigit() and request.form['input_height'].isdigit():
+            width = int(request.form['input_width'])
+            height = int(request.form['input_height'])
+            GameOfLife(width, height)
+            return redirect('/live')
+        else:
+            error_text = ' Параметры поля заданы неверно'
     GameOfLife(width, height)
-    return render_template('index.html')
+    return render_template('index.html', error_text=error_text)
 
 
 @app.route('/live')
