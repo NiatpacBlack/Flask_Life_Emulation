@@ -9,5 +9,6 @@
 ## Запуск проекта
    - Устанавливаем зависимости из requirements.txt: `pip install -r requirements.txt` Для Unix-систем вместо `pip` потребуется `pip3`.
    - вводим команду: `flask run`
-   - альтернативный вариант - установите gunicorn `pip install gunicorn` и введите команду `gunicorn --bind 0.0.0.0:5000 app:module`, в данном случае приложение будет доступно в локальной сети.
+   - альтернативный вариант для Unix-систем - установите gunicorn `pip3 install gunicorn` и введите команду `gunicorn --bind 127.0.0.1:5000 app:app`, в данном случае приложение будет доступно в локальной сети.
+   - альтернативный вариант для Windows - установите waitress `pip install waitress` и введите команду `waitress-serve --listen=127.0.0.1:5000 app:app`
 
