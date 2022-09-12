@@ -8,9 +8,8 @@
 
 ![image](https://user-images.githubusercontent.com/84034483/189501231-a4558776-c509-4e3d-a364-9df3b94b086c.png)
 
-Для Unix-систем вместо `pip` потребуется `pip3`.
 ## Запуск проекта
-   - Устанавливаем зависимости из requirements.txt: `pip install -r requirements.txt`
+   - Устанавливаем зависимости из requirements.txt: `pip install -r requirements.txt` Для Unix-систем вместо `pip` потребуется `pip3`.
    - вводим команду: `flask run`
    - альтернативный вариант - установите gunicorn `pip install gunicorn` и введите команду `gunicorn --bind 0.0.0.0:5000 app:module`, в данном случае приложение будет доступно в локальной сети.
 
