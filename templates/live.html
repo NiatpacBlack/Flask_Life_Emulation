@@ -3,23 +3,26 @@
 {% block title %}Live{% endblock %}
 {% block scripts %}
     {{ super() }}
-    <script>
-        setInterval(() => window.location.reload(), 10000);
-    </script>
+
+    <!"импорт библиотеки jquery">
+    <script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+
+    <!"импорт логики обновления данных на странице">
+    <script type="text/javascript" src="../static/js/live_update.js"></script>
 {% endblock %}
 {% block app_content %}
     <div class="header">
         <div class="container">
             <div class="menu">
                 <div class="home"><a href="/" class="btn btn-info">На главную</a></div>
-                <div class="counter"><p>{{ game.counter }}</p></div>
-                <div class="respawn"><a href="/live" class="btn btn-info">Создать новую жизнь</a></div>
+                <div id="counter" class="counter"><p>{{ game.counter }}</p></div>
+                <div class="respawn"><a href="/live" class="btn btn-info">Следующее поколение</a></div>
             </div>
         </div>
     </div>
     <div class="content">
         <div class="container">
-            <table class="world">
+            <table id="world" class="world">
                 {% for i in range(game.world|length) %}
                     <tr>
                         {% for j in range(game.world[0]|length) %}

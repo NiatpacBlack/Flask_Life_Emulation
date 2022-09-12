@@ -85,7 +85,6 @@ a {
     z-index: 1;
     width: 100%;
     height: 100px;
-    /*background: rgba(255, 255, 255, 0.63);*/
 }
 
 
@@ -177,29 +176,33 @@ a {
 
 .world {
     margin: auto;
-    border: 2px solid black;
+    border: 2px solid #000000;
     border-collapse: collapse;
+    box-shadow: 0 2px 150px rgba(255, 255, 255, 0.56);
 }
 
 
 td {
-    border: 1px solid black;
+    border: 1px solid #000000;
 }
 
 .cell {
     padding: 0.1vh 0.1vw 0.1vh 0.1vw;
-    /*background: whitesmoke;*/
-    background: rgba(255, 255, 255, 0.96);
+    background: rgb(255, 255, 255);
+    /*border-color: rgb(239, 220, 199);*/
     width: 1vw;
     height: 1vh;
 }
 
 .living-cell {
     background: lightgreen;
+    border-color: lightgreen;
+
 }
 
 .dead-cell {
     background: darkred;
+    border-color: darkred;
 }
 
 
